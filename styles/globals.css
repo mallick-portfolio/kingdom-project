@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="file"] {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.article-img-holder {
+  width: 100%;
+  height: 100%;
+  background: url(https://awik.io/demo/background-image-zoom/traffic2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 1s;
+}
+
+.projectCard:hover .project-img {
+  transform: scale(1.2);
+}
+
+
+
+
+.projectCard:hover .show {
+  margin-top: -23px !important;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hello:hover {
+  -webkit-transform: scale3d(1.06, 1.06, 1);
+  transform: scale3d(1.06, 1.06, 1);
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: var(--text-color);
+}
+ul,
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+}

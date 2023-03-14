@@ -1,0 +1,101 @@
+		
+Due task 100% same to kingdom
+===============================
+About Page 2 sections -- Nafiz Sheikh
+Vendor Page --- only stripe -- Nafiz Sheikh
+Project page -- working - Md. Ayakub
+Contact page redesign -- Nafiz Sheikh
+
+==== Next work ====
+Cursor effect --
+
+
+Language system -- rabbi
+  https://codepen.io/mewmix/pen/bGdNbbZ
+
+Vedio lightbox -- rabbi 
+  https://www.npmjs.com/package/react-image-video-lightbox
+
+
+Counter design -- rabbi
+  https://www.npmjs.com/package/react-countup
+
+Dark light mode system  -- rabbi
+  Tailwind dark light mode
+
+
+backend=== 3 days
+==================
+  Membership System 
+  Volunteer
+  Vendor
+  Invest
+  Donation 
+  Contact us
+  Email sending 
+  Stripe Subscription Base payment method
+
+  All the task is Depand on stripe payment method ---
+
+
+hosting === 2 days
+
+Dyploy on azure 
+Upload Strapi Collection as google sheet 
+setup mongodb database
+
+
+
+Stipe -- 
+ npm install @stripe/stripe-js @stripe/react-stripe-js stripe
+
+
+Stripe Subscription ---
+   Membership
+
+Stripe None Subscription -- 
+
+  Vendor
+  Donation
+
+
+
+Strapi Customization
+---------------------
+tutorials:false,
+notifications:{release:false}
+
+
+
+
+
+stripe charge payment
+=====================
+
+
+    // for charge payment intent
+    
+     const paymentIntent = await stripe.paymentIntents.create({
+        currency: "USD",
+        amount: "10000" * 100,
+        payment_method_types: ["card"],
+      });
+
+
+   res.json({
+        message: "Subscription Successfull",
+        clientSecret: paymentIntent.client_secret,
+      });
+
+
+// for confirm payment and get payment_intent 
+     const { paymentIntent, error: confirmError } =
+        await stripe.confirmCardPayment(`${data.clientSecret.client_secret}`, {
+          payment_method: {
+            card: "card",
+            billig_details: {
+              name: "rabbi",
+              email: email,
+            },
+          },
+        });
